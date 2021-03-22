@@ -1,0 +1,15 @@
+.prductsCard{
+    display: inline;
+
+}
+  .cardsProduct{
+      width: 400px;
+      height: 400px;
+      margin: 10px;
+  }  
+  .carousel-item {
+    &.active, &.carousel-item-right, &.carousel-item-next {
+      display: flex !important;
+      flex-wrap: wrap
+    }
+  }
