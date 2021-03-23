@@ -1,38 +1,35 @@
-const bodyParser = require("body-parser");
+//for encrypt the password before saving into the database
+//const bcrypt = require("bcrypt");
 const express = require("express");
-const User = require("./models/user");
+const { User, schemaValidate, findOne } = require("./models/user");
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-  // const user = new User({
-  //   type: req.body.type,
-  //   userName: req.body.userName,
-  //   password: req.body.password,
-  //   email: req.body.email,
-  // });
-  var user = req.body;
-  User.create(user, (err, data) => {
-    if (!err) {
-      console.log(data);
-      res.status(202).send(data);
-    } else {
-      res.status(400).send("Invalid User data");
-    }
-  });
+  // First Validate The Request
+  const { error } = schemaValidate.validate(req.body);
+  if (error) {
+    return res.status(400).send(error.details[0].message);
+  }
+  //
+  //    // Check if this user already exists
 
-  // await user.save((err, user) => {
-  //   if (err) {
-  //     res
-  //       .status(500)
-  //       .send(
-  //         "There was an error on the server and the request could not be completed."
-  //       );
-  //   } else res.status(200).send("User Created With Data :" + user);
+  let user = await User.findOne({ email: req.body.email });
+  if (user) {
+    return res.status(400).send("That user already exists !");
+  } else {
+    // Insert the new user if they do not exist yet
+
+    const user = new User({
+      type: req.body.type,
+      userName: req.body.userName,
+      password: req.body.password,
+      email: req.body.email,
+    });
+    await user.save();
+    //user.password = await bcrypt.hash(user.password, salt);
+
+    res.send(user);
+  }
 });
-// console.log(req.body);
-// const user = req.body;
-// register.create(user, (err, suc) => {
-//   if (err) return "Not Found";
-//   else res.send("Done Created");
-// });
+
 module.exports = router;

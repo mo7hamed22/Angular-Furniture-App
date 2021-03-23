@@ -1,3 +1,5 @@
+const Joi = require("joi");
+
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema;
@@ -21,5 +23,18 @@ var User = new schema({
   canAddOffers: Boolean,
   canAddDiscount: Boolean,
 });
+const schemaValidate = Joi.object({
+  type: Joi.required(),
+  userName: Joi.string().min(5).max(50).required(),
+  email: Joi.string().min(5).max(255).required().email(),
+  password: Joi.string().min(5).max(255).required(),
+});
 
-module.exports = mongoose.model("User", User);
+User = mongoose.model("user", User);
+
+module.exports = {
+  User: User,
+  schemaValidate: schemaValidate,
+};
+// exports.User = User;
+// exports.validate = validateUser;
