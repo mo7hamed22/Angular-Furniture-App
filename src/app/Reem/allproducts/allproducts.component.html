@@ -1,0 +1,290 @@
+<app-navbarcateogry></app-navbarcateogry>
+
+
+
+<div class="container-fluid">
+    <div class="row card-group" >
+      <div class="col-sm-3  mb-2" *ngFor="let  prod of AllProductList">
+        <div class="card">
+          <img [src]="prod.img" class="card-img-top">
+        <div class="card-body">
+          <h2 class="card-title" class="display4">{{ prod.name }}</h2>
+          <p class="card-text">  {{ prod.description }}</p>
+          <p class="card-text">   price: <b> {{ prod.price }}</b> </p>
+          <button mat-flat-button color="primary">AddCart</button>
+        </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+<!-- 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/pr1.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+                   
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/pr2.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3" >
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p4.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p5.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+    </div> -->
+<!-- </div> -->
+
+<!-- row 2  -->
+
+
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p6.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard"> 
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card> -->
+<!--             
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p7.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p8.jpg"> 
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+             -->
+        <!-- </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p9.jpg"> 
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p10.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p11.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p13.jpg"> 
+              
+                   </mat-card-header>
+                   <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+        <div class="col-lg-3">
+            <mat-card class="matCard">
+
+                <mat-card-header>
+                    <img mat-card-image  src="./assets/imgs/p14.jpg">  
+              
+                   </mat-card-header>
+                <mat-card-content class="contCard">
+                  
+
+                    <h1>Chair</h1>
+                    <b>$200</b>
+        
+                
+                </mat-card-content>
+               <mat-card-actions class="btnCard">
+                   <button mat-raised-button color="primary">Add Cart</button>
+               </mat-card-actions>
+                </mat-card>
+            
+        </div>
+    </div>
+</div> --> 
