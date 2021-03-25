@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.error("could not connect to mongo DB", err));
 app.use("/api/product", productRoute);
 
-app.post("/api/Auth", authRoute);
+app.use("/api/Auth", authRoute);
 // app.use("/", (req, res) => {
 //   res.status(404).send("Not Found Page");
 // });

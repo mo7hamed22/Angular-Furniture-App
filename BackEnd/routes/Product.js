@@ -3,7 +3,7 @@ const { Product, schemaValidate, findOne } = require("../models/product");
 const router = express.Router();
 var fs = require("fs");
 
-//get products
+//get products 1
 router.get("/allProducts", function (req, res, next) {
   Product.find(function (err, product) {
     if (err) {
@@ -14,7 +14,7 @@ router.get("/allProducts", function (req, res, next) {
 });
 //
 
-/* Add products */
+/* Add products 2*/
 router.post("/addProducts", function (req, res, next) {
   const { error } = schemaValidate.validate(req.body);
   if (error) {
@@ -36,7 +36,7 @@ router.post("/addProducts", function (req, res, next) {
     res.json(product);
   });
 });
-/* Update products */
+/* Update products 3 */
 router.put("/editProduct/", function (req, res, next) {
   let obj = req.body;
   let id = req.body._id;
@@ -53,7 +53,7 @@ router.put("/editProduct/", function (req, res, next) {
     }
   );
 });
-/* Find item by id */
+/* Find product  by id 4 */
 router.get("/:productId", function (req, res) {
   console.log(req.params.productId);
   const id = req.params.productId;
@@ -70,7 +70,7 @@ router.get("/:productId", function (req, res) {
         .send({ message: "Error retrieving Product with id=" + id });
     });
 });
-/* Remove item */
+/* Remove product  5*/
 router.delete("/:productId", function (req, res) {
   const id = req.params.productId;
 
