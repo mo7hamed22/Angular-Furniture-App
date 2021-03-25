@@ -9,8 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   //form module init with  service
   registerationForm = this.fb.group({
-    Email: ["", [Validators.required, Validators.minLength(3)]],
-    password: ["", [Validators.required, Validators.minLength(6)]],
+    Email: ["", [Validators.required]],
+    password: ["", [Validators.required]],
   });
 
   constructor(private fb: FormBuilder) {} // we describe this with injection when we call a service form bilder like this

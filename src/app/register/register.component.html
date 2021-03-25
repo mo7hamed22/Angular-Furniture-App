@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row justify-content-center align-items-center flex-column " style="margin: 30px;">
 
-        <form [formGroup]="registerationForm" class="col-md-6 justify-content-center">
+        <form [formGroup]="registerationForm" class="col-md-6 justify-content-center" novalidate (ngSubmit)="submitData()">
             <p class="text-center" id="logo"><img src="./assets/icon.png" width="100px" height="100px"> </p>
             <h2 class="text-center">Sign Up Homzmart</h2>
             <div class="form-group">
@@ -18,6 +18,9 @@
                     <small *ngIf="firstname.errors?.minlength" class="text-danger">
                         > Username field must be at least 3 characters
                     </small>
+                    <small class="text-danger" *ngIf="firstname.errors?.forbiddenName">
+                       > username is not allowed
+                    </small>
 
                 </div>
             </div>
@@ -29,20 +32,21 @@
                     class="text-danger">
                     > Last Name is required
                 </small>
+                
             </div>
 
             <div class="form-group">
                 <label for="validationCustomUsername">Email</label>
-                <input formControlName="Email" type="email" class="form-control" id="validationCustom03"
-                    placeholder="email" required>
+                <input [class.is-invalid]="email.invalid && email.touched" formControlName="Email" type="email" class="form-control" id="validationCustom03"
+                    placeholder="email">
                 <div *ngIf="email.invalid && email.touched">
-                    <small *ngIf="firstname.errors?.required" [class.is-invalid]="email.invalid || email.touched"
+                    <small *ngIf="email.errors?.required" [class.is-invalid]="email.invalid || email.touched"
                         class="text-danger">
                         > Email is required
                     </small>
-                    <small *ngIf="email.errors?.required" [class.is-invalid]="email.invalid || email.touched"
-                        class="text-danger">
-                        Email must be a valid email address
+                    
+                    <small class="text-danger" *ngIf="email.errors?.forbiddenName">
+                        > Email must be a valid email address
                     </small>
                 </div>
 
@@ -72,12 +76,12 @@
                     placeholder="comform password">
                 <div *ngIf="confirmpassword.invalid && confirmpassword.touched">
                     <small *ngIf="confirmpassword.errors?.required"
-                        [class.is-invalid]="password.invalid || password.touched" class="text-danger">
+                        [class.is-invalid]="confirmpassword.invalid || confirmpassword.touched" class="text-danger">
                         Confirm Password is required
                     </small>
-                    <small *ngIf="confirmpassword.errors?.minlength"
-                        [class.is-invalid]="password.errors?.minlength || password.touched" class="text-danger">
-                        Passwords must match
+                    
+                    <small *ngIf="registerationForm.errors?.misMatch">
+                        password does not match the password
                     </small>
                 </div>
 
