@@ -1,0 +1,71 @@
+
+
+[
+    {
+      
+    "id":1,
+    "name":"Chair",
+    "description":"Reception chair all colors",
+    "price":2000,
+    "img":"./assets/imgs/allprodimgs/p8.jpg"
+  },
+  {
+      
+    "id":2,
+    "name":"Seating ",
+    "description":"living room  chair grey ",
+    "price":4000,
+    "img":"./assets/imgs/allprodimgs/p6.jpg"
+  },
+  {
+      
+    "id":3,
+    "name":"Living Chair",
+    "description":"seating  Room chairs brown ",
+    "price":6000,
+    "img":"./assets/imgs/allprodimgs/p3.jpg"
+  },
+
+  {
+      
+    "id":4,
+    "name":"Chair",
+    "description":"chairs modern with table",
+    "price":8000,
+    "img":"./assets/imgs/allprodimgs/p4.jpg"
+  },
+  {
+      
+    "id":5,
+    "name":"living sofa",
+    "description":"sweet sofa chair",
+    "price":2000,
+    "img":"./assets/imgs/allprodimgs/p5.jpg"
+  },
+  {
+      
+    "id":6,
+    "name":"chair",
+    "description":"sandbridge chairs",
+    "price":2000,
+    "img":"./assets/imgs/allprodimgs/p6.jpg"
+  },
+  {
+      
+    "id":7,
+    "name":"sofa chair",
+    "description":"Reception chair",
+    "price":2000,
+    "img":"./assets/imgs/allprodimgs/p7.jpg"
+  },
+  {
+      
+    "id":8,
+    "name":"living sofa",
+    "description":"Reception chair",
+    "price":2000,
+    "img":"./assets/imgs/allprodimgs/p6.jpg"
+  }
+   
+
+]

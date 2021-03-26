@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { MLoginComponent } from './m-login/m-login.component';
+import { AccessiorsComponent } from './accessiors/accessiors.component';
+import { AllproductsComponent } from './allproducts/allproducts.component';
+import { Category1Component } from './category1/category1.component';
+import { Category2Component } from './category2/category2.component';
+import { FreespacesComponent } from './freespaces/freespaces.component';
+import { ProductsdetailsComponent } from './productsdetails/productsdetails.component';
 
 const routes: Routes = [
-  {path :'home',component:HomeComponent},
-  {path:'login' , component:MLoginComponent}
+  {path:'',redirectTo:'/allprducts',pathMatch:'full'},
+    {path:'allprducts',component:AllproductsComponent},
+    {path:'allprducts/:id',component:ProductsdetailsComponent},
+    {path:'bedroom',component:Category2Component},
+    {path:'livingroom',component:Category1Component},
+    {path:'freespaces',component:FreespacesComponent},
+    {path:'decoration',component:AccessiorsComponent},
+  
 ];
 
 @NgModule({

@@ -3,11 +3,14 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "furnitureHome": {
+    "materialproject": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/furnitureHome",
+            "outputPath": "dist/materialproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,20 +32,9 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
-              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
-              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
-              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -62,13 +54,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -77,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "furnitureHome:build"
+            "browserTarget": "materialproject:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "furnitureHome:build:production"
+              "browserTarget": "materialproject:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "furnitureHome:build"
+            "browserTarget": "materialproject:build"
           }
         },
         "test": {
@@ -126,16 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "furnitureHome:serve"
+            "devServerTarget": "materialproject:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "furnitureHome:serve:production"
+              "devServerTarget": "materialproject:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "furnitureHome"
+  "defaultProject": "materialproject"
 }

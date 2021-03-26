@@ -1,0 +1,69 @@
+[
+    {
+      
+    "ID":1,
+    "name":"Chair",
+    "description":"Reception chair all colors",
+    "price":2000,
+    "img":"./assets/imgs/livingroom/pr1.jpg"
+  },
+  {
+      
+    "ID":2,
+    "name":"Seating ",
+    "description":"living room  chair grey ",
+    "price":4000,
+    "img":"./assets/imgs/livingroom/pr2.jpg"
+  },
+  {
+      
+    "ID":3,
+    "name":"Living Chair",
+    "description":"seating  Room chairs brown ",
+    "price":6000,
+    "img":"./assets/imgs/livingroom/p3.jpg"
+  },
+
+  {
+      
+    "ID":4,
+    "name":"Chair",
+    "description":"chairs modern with table",
+    "price":8000,
+    "img":"./assets/imgs/livingroom/p4.jpg"
+  },
+  {
+      
+    "ID":5,
+    "name":"living sofa",
+    "description":"sweet sofa chair",
+    "price":2000,
+    "img":"./assets/imgs/livingroom/p5.jpg"
+  },
+  {
+      
+    "ID":6,
+    "name":"chair",
+    "description":"sandbridge chairs",
+    "price":2000,
+    "img":"./assets/imgs/livingroom/p6.jpg"
+  },
+  {
+      
+    "ID":7,
+    "name":"sofa chair",
+    "description":"Reception chair",
+    "price":2000,
+    "img":"./assets/imgs/livingroom/p7.jpg"
+  },
+  {
+      
+    "ID":8,
+    "name":"living sofa",
+    "description":"Reception chair",
+    "price":2000,
+    "img":"./assets/imgs/livingroom/p8.jpg"
+  }
+   
+
+]
