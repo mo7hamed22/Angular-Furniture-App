@@ -1,0 +1,93 @@
+
+$mainColor:#12264b;
+$fontGrayColor:#00000099;
+$ScandColor:#ffb300;
+.fontGrayColor{
+  color: $fontGrayColor;
+}
+.bg-mainColor{
+  background-color: $mainColor;
+}
+.ScandColor{
+  color: $ScandColor;
+}
+.mainColor{
+  color: $mainColor;
+}
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+
+div.cart{
+  background-color: #f9f9f9;
+}
+
+div.cardProduct {
+  div{
+    img{
+      width:inherit;
+    };
+    p.productName{
+      color: $fontGrayColor;
+      font-weight: bold;
+    };
+    p.productprice{
+      span{
+        font-weight: bold;
+        color: $mainColor;
+      };
+      b{
+        color: $ScandColor;
+      }
+    }
+
+    div.productQuantity{
+      span{
+        color: $fontGrayColor;
+      }
+    }
+  }
+
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+// .cart .mat-stepper-horizontal, .mat-stepper-vertical {
+//     background-color: #fff; 
+// }
+
+// .cart .mat-card {
+//     background: #FFF;
+//     color: #424242;
+// }
+
+.cart .mat-step-header .mat-step-label.mat-step-label-active {
+    color: #000
+};
+
+.mat-step-header .mat-step-label.mat-step-label-active {
+    color: white; 
+}

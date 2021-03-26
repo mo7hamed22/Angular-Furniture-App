@@ -5,6 +5,7 @@ import { throwError } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import {catchError} from 'rxjs/operators';
 import { ALaccessiors, ALbedroom, ALfree, ALproducts, IProducts } from 'src/app/interfaces/interface';
+import { ISingleCart } from '../interfaces/GetSingleCartInterface';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +15,21 @@ export class AllproductsService {
    _url3= './assets/data/decoration.json';
    _url4= './assets/data/bedroom.json';
    _url5= './assets/data/freespaces.json';
+  public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
+
 
   constructor(private _http:HttpClient) { }
+
+  getSingleCart():Observable<ISingleCart>{
+    return this._http.get<any>(this._GetSingleCart).pipe(
+      // catchError(
+      //   // (err)=>{
+      //   //   return (err.message || "server not fond")
+      //   // }
+      // )
+    )
+  }
+
   getAllProducts():Observable<ALproducts[]>{
     return this._http.get<ALproducts[]>(this._url2).pipe(
   
