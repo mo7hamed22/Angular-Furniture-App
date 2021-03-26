@@ -10,23 +10,35 @@ import { AllproductsService } from '../services/allproducts.service';
 })
 export class Category1Component implements OnInit {
   ProductList: IProducts[] = [];
-  errormsg3:any ="";
+  LivingRome: IProducts[] = [];
+  errormsg3: any = "";
 
-  constructor(private allproducts:AllproductsService, private router:Router,private activatedRoute:ActivatedRoute) { }
+  constructor(private allproducts: AllproductsService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
     this.allproducts.getLivingRoomProducts().subscribe(
-      data=>{
-      this.ProductList=data;
-    },
-    serviceErr => {
-      this.errormsg3 = serviceErr;
+      data => {
+        this.ProductList = data;
+        this.LivingRome = data.filter((product) => {
+          console.log(product.category)
+          return product.category == "living room"
+        })
+        console.log("List p", this.ProductList)
+        console.log("Living", this.LivingRome)
+      },
+      serviceErr => {
+        this.errormsg3 = serviceErr;
 
-    }
+      })
 
-     )
-  
+
+
+
   }
+
+
+
+
 
 }
