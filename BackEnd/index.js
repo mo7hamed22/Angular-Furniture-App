@@ -6,7 +6,7 @@ const authRoute = require("./routes/Auth");
 const productRoute = require("./routes/Product");
 const router = express.Router();
 bodyParser = require("body-parser");
-const _PORT = 5558;
+const _PORT = 5555;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());

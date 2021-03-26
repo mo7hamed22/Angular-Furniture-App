@@ -10,6 +10,7 @@ import { ALaccessiors, ALbedroom, ALfree, ALproducts, IProducts } from 'src/app/
 })
 
 export class AllproductsService {
+<<<<<<< HEAD
   //_url = './assets/data/livingroom.json';
   _url2 = './assets/data/allproducts.json';
   _url3 = './assets/data/decoration.json';
@@ -21,6 +22,16 @@ export class AllproductsService {
 
   constructor(private _http: HttpClient) { }
   getAllProducts(): Observable<ALproducts[]> {
+=======
+   _url= './assets/data/livingroom.json';
+   _url2= 'http://localhost:5555/api/product/allProducts';
+   _url3= './assets/data/decoration.json';
+   _url4= './assets/data/bedroom.json';
+   _url5= './assets/data/freespaces.json';
+
+  constructor(private _http:HttpClient) { }
+  getAllProducts():Observable<ALproducts[]>{
+>>>>>>> ef1039b113bde8ed2d5285a809e85b65cfea12e9
     return this._http.get<ALproducts[]>(this._url2).pipe(
 
       catchError(
