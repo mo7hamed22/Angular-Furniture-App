@@ -10,7 +10,7 @@ import { ALaccessiors, ALbedroom, ALfree, ALproducts, IProducts } from 'src/app/
 })
 export class AllproductsService {
    _url= './assets/data/livingroom.json';
-   _url2= './assets/data/allproducts.json';
+   _url2= 'http://localhost:5555/api/product/allProducts';
    _url3= './assets/data/decoration.json';
    _url4= './assets/data/bedroom.json';
    _url5= './assets/data/freespaces.json';

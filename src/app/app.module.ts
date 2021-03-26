@@ -13,8 +13,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AllproductsComponent } from './allproducts/allproducts.component';
-import { Category1Component } from './category1/category1.component';
-import { Category2Component } from './category2/category2.component';
+import { Category1Component } from './livingroom/category1.component';
+import { Category2Component } from './bedroom/category2.component';
 import { AllcategoryComponent } from './allcategory/allcategory.component';
 import { NavbarcateogryComponent } from './navbarcateogry/navbarcateogry.component';
 import { FreespacesComponent } from './freespaces/freespaces.component';

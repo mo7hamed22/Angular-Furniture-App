@@ -15,7 +15,7 @@ var Product = new schema({
   description: String,
   Category: {
     type: String,
-    default: "unCategorized",
+    // default: "unCategorized",
   },
 
   discount: { type: String, default: "no Discount" },

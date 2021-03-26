@@ -6,9 +6,9 @@
     <div class="row card-group" >
       <div class="col-sm-3  mb-2" *ngFor="let  prod of AllProductList">
         <div class="card">
-          <img [src]="prod.img" class="card-img-top">
+          <img [src]="prod.product_img" class="card-img-top">
         <div class="card-body">
-          <h2 class="card-title" class="display4">{{ prod.name }}</h2>
+          <h2 class="card-title" class="display4">{{ prod.productName }}</h2>
           <p class="card-text">  {{ prod.description }}</p>
           <p class="card-text">   price: <b> {{ prod.price }}</b> </p>
           <button mat-flat-button color="primary">AddCart</button>

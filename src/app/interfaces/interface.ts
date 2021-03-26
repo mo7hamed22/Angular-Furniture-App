@@ -6,11 +6,11 @@ export interface IProducts {
     img:string;
 }
 export interface ALproducts{
-    ID:number;
-    name:string;
+    _id:number;
+    productName:string;
     description:string;
     price:number;
-    img:string;
+    product_img:string;
     
 }
 
