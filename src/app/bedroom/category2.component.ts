@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ALbedroom } from '../interfaces/interface';
+import { ALproducts } from '../interfaces/interface';
 import { AllproductsService } from '../services/allproducts.service';
 
 @Component({
@@ -10,24 +10,35 @@ import { AllproductsService } from '../services/allproducts.service';
 })
 export class Category2Component implements OnInit {
 
- bedRoom: ALbedroom[] = [];
+ bedRoom: ALproducts[] = [];
   errormsg3:any ="";
 
   constructor(private bedRooms:AllproductsService, private router:Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.bedRooms.getBedRoom().subscribe(
-      data=>{
-      this.bedRoom=data;
-    },
-    serviceErr => {
+    
+
+    
+
+    this.bedRooms.getAllProducts().subscribe(
+      data => {
+     
+      this.bedRoom= data.filter((product) => {
+      console.log(product.category)
+      return product.category == "bedroom"
+      })
+     
+    
+      },
+      serviceErr => {
       this.errormsg3 = serviceErr;
+      
+      })
 
-    }
+  
+}
 
-     )
   
 
-}
 }
