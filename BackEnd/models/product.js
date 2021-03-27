@@ -13,7 +13,11 @@ var Product = new schema({
   //   contentType: String,
   // },
   description: String,
+
   category:String,
+
+
+
 
   discount: { type: String, default: "no Discount" },
   rate: Number,

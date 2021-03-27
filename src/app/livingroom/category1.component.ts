@@ -9,6 +9,7 @@ import { AllproductsService } from '../services/allproducts.service';
   styleUrls: ['./category1.component.scss']
 })
 export class Category1Component implements OnInit {
+
   
   LivingRoom: ALproducts[] = [];
 
@@ -33,6 +34,10 @@ export class Category1Component implements OnInit {
       
       })
 }
+
+
+
+
 
 
 }
