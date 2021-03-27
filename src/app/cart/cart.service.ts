@@ -1,29 +1,16 @@
-// import { Injectable } from '@angular/core';
-// import { ProductsService } from 'src/Services/products.service';
+import { Injectable } from '@angular/core';
+import { AllproductsService } from '../services/allproducts.service';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class CartService {
+@Injectable({
+  providedIn: 'root'
+})
+export class CartService {
  
-//   constructor(private ProductsService:ProductsService) {}
+  constructor(private _productService:AllproductsService) {}
+  productInCart:any;
+  totalPrice = 0;
 
-//   productInCart;
-//   totalPrice = 0;
-//   ProductsService.getSingleCart().subscribe(
-//     data=>{
-//       ProductsService = data
-//       console.log(data)
-
-//       for(let i=1; i < productInCart.length ; i=i+1){
-//         this.totalPrice += productInCart[i].price ;
-//       }
-//     },
-//     err=>{
-
-//     }
-//   )
-// }
+}
 
 
     

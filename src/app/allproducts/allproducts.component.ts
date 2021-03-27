@@ -14,6 +14,7 @@ export class AllproductsComponent implements OnInit {
 
 
   constructor(private allproducts:AllproductsService, private router:Router,private activatedRoute:ActivatedRoute) { }
+ 
 
   ngOnInit(): void {
 
@@ -25,7 +26,6 @@ export class AllproductsComponent implements OnInit {
       this.errormsg3 = serviceErr;
 
     }
-
      )
   
 }

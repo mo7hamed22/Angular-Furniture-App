@@ -1,7 +1,5 @@
 const Joi = require("joi");
-
 const mongoose = require("mongoose");
-
 const schema = mongoose.Schema;
 var User = new schema({
   type: { type: Number, required: true },
@@ -13,6 +11,7 @@ var User = new schema({
     data: Buffer,
     contentType: String,
   },
+  cartData: [],
   Gender: String,
   wishListLists: { type: String },
   address: String,

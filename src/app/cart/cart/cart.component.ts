@@ -13,13 +13,23 @@ import { AllproductsService } from 'src/app/services/allproducts.service';
 export class CartComponent implements OnInit {
 
   constructor(private _productService:AllproductsService) { }
+/////////////////////////////////////////////////////////////
 
 
-  productInCart:any;
+  productInCart:ISingleCart[] = [];
   totalPrice = 0;
 
-  ngOnInit(): void {
+  deletfromCart(_id:number){
+    console.log("all produc" , _id)
+    this.productInCart = this.productInCart.filter((product) => {
+      console.log(product.id)
+      return product.id !== _id
+      })
 
+  }
+  /////////////////////////////////////////////////
+  ngOnInit(): void {
+ 
     this._productService.getSingleCart().subscribe(
       data=>{
         this.productInCart = data
@@ -32,6 +42,8 @@ export class CartComponent implements OnInit {
       }
     )
   }
+
+
 
   
 }
