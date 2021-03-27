@@ -12,7 +12,7 @@ import { ProductsdetailsComponent } from './productsdetails/productsdetails.comp
 const routes: Routes = [
   {path:'',redirectTo:'/allprducts',pathMatch:'full'},
     {path:'allprducts',component:AllproductsComponent},
-    {path:'allprducts/:id',component:ProductsdetailsComponent},
+   
     {path:'bedroom',component:Category2Component},
     {path:'livingroom',component:Category1Component},
     {path:'freespaces',component:FreespacesComponent},
