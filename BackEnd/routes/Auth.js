@@ -47,5 +47,19 @@ router.post("/login", async (req, res) => {
       message: "User Logged in Successfully",
     });
 });
+// ======
+router.get("/:userId", function (req, res) {
+  console.log(req.params.userId);
+  const id = req.params.userId;
+  User.findById(id)
+    .then((data) => {
+      if (!data)
+        res.status(404).send({ message: "Not found User with id " + id });
+      else res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({ message: "Error retrieving User with id=" + id });
+    });
+});
 
 module.exports = router;

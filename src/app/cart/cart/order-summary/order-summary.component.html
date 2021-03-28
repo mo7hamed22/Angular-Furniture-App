@@ -1,0 +1,16 @@
+<p>order-summary works!</p>
+<h4 class="row " *ngFor = 'let product of productInCart'>
+    <div class="col-sm-4 pt-3">
+        <span class="fontGrayColor">1 x</span>
+        <b class="mainColor"> {{product.price}} </b>
+    </div>
+    <div class="col-sm-8">
+        <span class="fontGrayColor "> {{product.title}} </span>
+    </div>
+</h4>
+<mat-divider class=""></mat-divider>
+<div class="pt-4 pb-4">
+    <span class="fontGrayColor">Total :</span>
+    <b class="mainColor pl-2">{{totalPrice}}</b>
+    <b class="ScandColor"> EGP</b>
+</div>
