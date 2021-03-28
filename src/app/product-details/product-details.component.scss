@@ -1,0 +1,127 @@
+//mat-grid-tile {
+ // background: lightblue;
+ 
+//}
+body{
+  background-color:rgba(241, 237, 237, 0.89) ;
+  }
+  
+  img{
+      margin-left: 5px;
+    }
+    
+    mat-card{
+      padding:20px;
+      margin:20px;
+      width:80%;
+      height:70%;
+    }
+    
+    .top{
+      padding:10px;
+      margin:10px;
+    
+    }
+    
+    .furniture{
+      padding:10px;
+      margin:30px;
+    
+    }
+    
+    .storeItems{
+      padding:10px;
+      margin:30px;
+    
+    }
+    
+    .decore{
+      padding:10px;
+      margin:30px;
+    
+    
+    }
+    del {
+      text-decoration: line-through;
+    }
+    
+    
+    
+    h2{
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+    }
+    h4,h3{
+      text-align: center;
+    //color: rgb(191, 137, 241);
+    font-weight: bold;
+  
+   font-style: oblique;
+    }
+    
+    .container{
+      background-color: rgb(247, 243, 243);
+    }
+    
+  .offerHeadline{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+  }
+  
+  
+    .overleyContainer {
+      position: relative;
+      width: 100%;
+    }
+    
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background-color:rgba(110, 3, 62, 0.842);
+      overflow: hidden;
+      width: 100%;
+      height:0;
+      transition: .5s ease;
+    }
+    
+    .overleyContainer:hover .overlay {
+      bottom: 0;
+      height: 100%;
+    }
+    
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    /*mat-card-content{
+      float:right;
+    }*/
+  
+    /*@media only screen and (min-width: 768px) {
+      mat-grid-list{
+        cols:2;
+      }
+  
+    }*/
+  
+   /* .container-fluid{
+      background-color: rgb(252, 250, 250);
+    }*/

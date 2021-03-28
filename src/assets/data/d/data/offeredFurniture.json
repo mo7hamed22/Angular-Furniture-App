@@ -1,0 +1,36 @@
+[
+    {"id":"1",
+        "name":"Chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"Reception chair all colors ",
+        "price":"3000",
+         "discount":"30%",
+        "priceAfterDiscount":"1000",
+        "imageUrl":"./assets/imgs/bedroom/p8.jpg"
+    },
+    
+    {"id":"2",
+        "name":"Seating",
+        "quantity":"10",
+        "color":"gray",
+        "description":"living room  chair grey",
+        "price":"3000",
+        "discount":"30%",
+        "priceAfterDiscount":"1000",
+        "imageUrl":"./assets/imgs/bedroom/p2.jpg"
+    },
+
+    {"id":"3",
+        "name":"Living Chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"seating  Room chairs brown",
+        "price":"3000",
+        "discount":"30%",
+        "priceAfterDiscount":"1000",
+        "imageUrl":"imgs/bedroom/p3.jpg"
+    }
+
+]
+

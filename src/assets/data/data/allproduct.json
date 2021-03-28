@@ -1,0 +1,203 @@
+[
+    {"id":"1",
+       "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "category":"decoration",
+        "imageUrl":"./assets/imgs/decoration/p6.jpg"
+    },
+    
+    {"id":"2",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "category":"decoration",
+        "imageUrl":"./assets/imgs/decoration/p2.jpg"
+    },
+
+    {"id":"3",
+       "name":"chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "category":"store",
+        "imageUrl":"./assets/imgs/decoration/p3.jpg"
+    },
+
+
+    {"id":"1",
+         "name":"antika",
+        "quantity":"10",
+        "category":"decoration",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p4.jpg"
+    },
+    
+ 
+
+ 
+    {"id":"3",
+       "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+		"category":"store",
+        "imageUrl":"./assets/imgs/freespaces/p7.jpg"
+    },
+	
+	 {"id":"2",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p5.jpg"
+    },
+
+    {"id":"3",
+       "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p4.jpg"
+    },
+
+
+    {"id":"2",
+         "name":"shoses store",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+        "category":"store",
+        "imageUrl":"./assets/imgs/decoration/p3.jpg"
+    },
+    
+    {"id":"3",
+        "name":"chair",
+        "quantity":"10",
+        "color":"gray",
+        "category":"store",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p2.jpg"
+    },
+
+    {"id":"1",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p7.jpg"
+    },
+	
+	{"id":"1",
+         "name":"sofa chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"Reception chair all colors ",
+        "price":"3000",
+         "discount":"30%",
+        "priceAfterDiscount":"1000",
+		"category":"furniture",
+         "imageUrl":"./assets/imgs/bedroom/p8.jpg"
+    },
+    
+    {"id":"2",
+        "name":"sofa chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"30%",
+        "priceAfterDiscount":"1000",
+		"category":"furniture",
+         "imageUrl":"./assets/imgs/bedroom/p7.jpg"
+    },
+
+    {"id":"3",
+        "name":"sofa chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"30%",
+        "priceAfterDiscount":"1000",
+		"category":"furniture",
+
+         "imageUrl":"./assets/imgs/bedroom/p6.jpg"
+    },
+	
+	   {"id":"1",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+		"category":"decoration",
+        "imageUrl":"./assets/imgs/decoration/p7.jpg"
+    },
+    
+    {"id":"2",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+		"category":"decoration",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p5.jpg"
+    },
+
+    {"id":"3",
+        "name":"antika",
+        "quantity":"10",
+        "color":"gray",
+		"category":"decoration",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./assets/imgs/decoration/p3.jpg"
+    }
+
+
+
+
+]
+
+
+

@@ -26,6 +26,23 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatGridListModule} from '@angular/material/grid-list'
+//import {MatCardModule} from '@angular/material/card'
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { ProductsWithOfferComponent } from './products-with-offer/products-with-offer.component';
+//import {HttpClientModule} from '@angular/common/http';
+import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
+//import { TeximateModule } from 'ngx-teximate';
+//import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HalfDiscountComponent } from './half-discount/half-discount.component';
+//import { SingleProductComponent } from './single-product/single-product.component';
+//import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +55,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccessiorsComponent,
     HeaderComponent,
     ProductsdetailsComponent,
+    ProductsWithOfferComponent,
+    FreeDeliveryComponent,
+    ProductDetailsComponent,
+    //ProductDetailsComponent,
+    HalfDiscountComponent,
+   // SingleProductComponent, 
 
   ],
   imports: [
@@ -52,8 +75,27 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
-  
+    ReactiveFormsModule,
+
+
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+   
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatPaginatorModule,
+    BrowserModule,
+    AppRoutingModule,
+   //  FlexLayoutModule ,
+    HttpClientModule,
+    BrowserAnimationsModule,  // Add this only in the root module
+  //  TeximateModule,
+  //  MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

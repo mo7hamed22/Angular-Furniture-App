@@ -1,0 +1,36 @@
+[
+    {"id":"4",
+        "name":"living sofa",
+        "quantity":"10",
+        "color":"gray",
+        "description":"sweet sofa chair",
+        "price":"3000",
+        "discount":"Free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"imgs/freespaces/p5.png"
+    },
+    
+    {"id":"4",
+        "name":"living sofa",
+        "quantity":"10",
+        "color":"gray",
+        "description":"sweet sofa chair",
+        "price":"3000",
+        "discount":"Free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"imgs/freespaces/p5.png"
+    },
+
+    {"id":"4",
+        "name":"living sofa",
+        "quantity":"10",
+        "color":"gray",
+        "description":"sweet sofa chair",
+        "price":"3000",
+        "discount":"Free delivery",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"imgs/freespaces/p5.png"
+    }
+
+]
+

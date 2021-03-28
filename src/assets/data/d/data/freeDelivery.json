@@ -1,0 +1,65 @@
+[
+    {"id":"1",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+      
+        "imageUrl":"assets/delivery.jpg"
+    },
+    
+    {"id":"2",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "imageUrl":"assets/delivery.jpg"
+    },
+
+    {"id":"3",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "imageUrl":"assets/delivery.jpg"
+    },
+
+
+    {"id":"4",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "imageUrl":"assets/delivery.jpg"
+    },
+    
+    {"id":"5",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "imageUrl":"assets/delivery.jpg"
+    },
+
+    {"id":"6",
+        "name":"iphone7",
+        "quantity":"10",
+        "color":"gray",
+        "description":"black chair with wooden material ",
+        "price":"3000",
+        "discount":"free delivery",
+        "imageUrl":"assets/delivery.jpg"
+    }
+
+]
+

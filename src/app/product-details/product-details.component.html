@@ -1,0 +1,62 @@
+<div class="container-fluid">
+<mat-grid-list cols="2"> 
+
+
+
+<mat-grid-tile >
+<div class="container-fluid">
+  <div class="row" >
+    <div class="col-12 col-lg-12 col-md-12 sol-sm-12">
+    
+      <table class="table table-striped">
+        <tr>
+          <td style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif;">Name</td>
+          <td>{{productData.name}}</td>
+        </tr>
+        <tr>
+          <td  style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif;">Description</td>
+          <td>{{productData['description']}}</td>
+        </tr>
+        <tr>
+          <td  style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif;"> Price</td>
+          <td>{{productData['price']}}</td>
+        </tr>
+
+        <tr>
+          <td  style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif;"> Price</td>
+          <td>{{productData['color']}}</td>
+        </tr>
+
+
+        <tr>
+          <td  style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif;"> discount</td>
+          <td>{{productData['discount']}}</td>
+        </tr>
+      </table>
+      <br>
+   
+      <button class="btn btn-warning" (click)="navigation('')">Add to cart</button>
+    </div>
+  </div>
+</div>
+</mat-grid-tile>
+
+
+
+<mat-grid-tile >
+<mat-card>
+  <h2 style="font-size:large; color:blueviolet; font-family:Arial, Helvetica, sans-serif; text-align: center;"> 
+    {{productData.name}}</h2>
+
+  <img mat-card-image [src]="productData.imageUrl" class="img-thumbnail" alt="Photo of a Shiba Inu" style="width:90%; height:90%; margin:0px">
+  <div class="overlay">
+    <div class="text">
+      <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Free delivery</h1>
+      <h3  style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">with homzmart every thing will be easier </h3>
+    </div>
+  </div>
+</mat-card>
+</mat-grid-tile>
+
+
+</mat-grid-list></div>
