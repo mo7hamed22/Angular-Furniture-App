@@ -25,21 +25,9 @@ export class AllproductsService {
 
 //   allProducts: IProducts[] = [];
 
-
-//    _url= './assets/data/livingroom.json';
-//    _url2= 'http://localhost:5555/api/product/allProducts';
-//    _url3= './assets/data/decoration.json';
-//    _url4= './assets/data/bedroom.json';
-//    _url5= './assets/data/freespaces.json';
 public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
+  _url= 'http://localhost:5555/api/product/allProducts';
 
-// =======
-  //  _url= './assets/data/livingroom.json';
-   _url= 'http://localhost:5555/api/product/allProducts';
-  //  _url3= './assets/data/decoration.json';
-  //  _url4= './assets/data/bedroom.json';
-  //  _url5= './assets/data/freespaces.json';
-// >>>>>>> ccdbaa03b3746cb6d666f9b58ea1c27dd915c6f0
 
   constructor(private _http:HttpClient) { }
 
@@ -101,12 +89,12 @@ public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
 // =======
     return this._http.get<ALproducts[]>(this._url).pipe(
   
-    //  RTCError(
-    //    (err)=>{
-    //      return throwError(err.message || "server issue ")
+//      RTCError(
+//        (err)=>{
+//          return throwError(err.message || "server issue ")
          
   
-    //     })
+//         })
 // >>>>>>> ccdbaa03b3746cb6d666f9b58ea1c27dd915c6f0
     )
     
