@@ -11,7 +11,7 @@
           <h2 class="card-title" class="display4">{{ prod.productName }}</h2>
           <p class="card-text">  {{ prod.description }}</p>
           <p class="card-text">   price: <b> {{ prod.price }}</b> </p>
-          <button mat-flat-button color="primary">AddCart</button>
+          <button mat-flat-button color="primary" (click) = 'sendProductToService(prod.productName)' >AddCart</button>
         </div>
         </div>
       </div>

@@ -1,0 +1,36 @@
+[
+    {"id":"1",
+        "name":"sofa chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"Reception chair",
+        "price":"2000",
+        "discount":"50%",
+        "priceAfterDiscount":"1000",
+        "imageUrl":"imgs/decoration/p7.jpg"
+    },
+    
+    {"id":"2",
+        "name":"sofa chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"sandbridge chairs ",
+        "price":"2000",
+        "discount":"50%",
+        "priceAfterDiscount":"1000",
+        "imageUrl":"imgs/decoration/p6.jpg"
+    },
+
+    {"id":"3",
+        "name":" chair",
+        "quantity":"10",
+        "color":"gray",
+        "description":"sweet sofa chair",
+        "price":"3000",
+        "discount":"50%",
+        "priceAfterDiscount":"1500",
+        "imageUrl":"./imgs/decoration/p5.jpg"
+    }
+
+]
+
