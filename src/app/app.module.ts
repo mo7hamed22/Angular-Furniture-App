@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule } from '@angular/forms';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AllproductsComponent } from './allproducts/allproducts.component';
 import { Category1Component } from './livingroom/category1.component';
@@ -21,10 +21,22 @@ import { FreespacesComponent } from './freespaces/freespaces.component';
 import { AccessiorsComponent } from './accessiors/accessiors.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsdetailsComponent } from './productsdetails/productsdetails.component';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from './dashboard-m/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HomeComponent } from './dashboard-m/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AddProductComponent } from './dashboard-m/add-product/add-product.component'
 
 @NgModule({
   declarations: [
@@ -38,6 +50,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccessiorsComponent,
     HeaderComponent,
     ProductsdetailsComponent,
+    NavComponent,
+    HomeComponent,
+    AddProductComponent,
 
   ],
   imports: [
@@ -52,8 +67,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
-  
+    ReactiveFormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatSlideToggleModule,
+    MatIconModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

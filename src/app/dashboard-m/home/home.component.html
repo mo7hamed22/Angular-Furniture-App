@@ -1,0 +1,35 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Today Deals</h1>
+  <mat-grid-list cols="3" rowHeight="400px">
+    <mat-grid-tile *ngFor="let product of productList " [colspan]="col" [rowspan]="row">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h2>{{product.productName}}</h2>
+            <p class="card-text">description {{ product.description }}</p>
+            <p class="card-text"> price: <b> {{ product.price }}</b>
+            <p class="card-text"> category: <b> {{ product.category }}</b>
+            <p class="card-text"> quantity: <b> {{ product.quantity }}</b>
+            <p class="card-text"> discount: <b> {{ product.discount}}</b>
+
+            <p class="card-text"> ID: <b> {{ product._id }}</b>
+
+              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Edit</button>
+                <button mat-menu-item>Remove</button>
+              </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+            <img [src]="product.product_img" class="card-img-top">
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
