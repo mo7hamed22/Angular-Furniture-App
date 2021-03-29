@@ -10,8 +10,8 @@
 <img src="imgesWebsite/Shipment.png">
 
 <h3>Dashboard</h3>
-<img src="imgesWebsite/dash-light.png" width="100px">
-<img src="imgesWebsite/dash-dark.png"   width="100px">
+<img src="imgesWebsite/dash-light.png" width="500px">
+<img src="imgesWebsite/dash-dark.png"   width="500px">
 
 
 
