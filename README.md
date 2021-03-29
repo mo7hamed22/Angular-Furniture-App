@@ -4,6 +4,17 @@
 <h3>Offers</h3>
 <img src="imgesWebsite/offers.png">
 
+<h3>Cart</h3>
+<img src="imgesWebsite/Cart.png">
+<h3>Shipment</h3>
+<img src="imgesWebsite/Shipment.png">
+
+<h3>Dashboard</h3>
+<img src="imgesWebsite/dash-light.png" width="100px">
+<img src="imgesWebsite/dash-dark.png"   width="100px">
+
+
+
 
 
 
