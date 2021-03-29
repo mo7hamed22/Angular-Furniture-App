@@ -1,6 +1,9 @@
 <h3>Home Page</h3>
 <img src="imgesWebsite/homePage.png">
 
+<h3>Offers</h3>
+<img src="imgesWebsite/offers.png">
+
 
 
 
