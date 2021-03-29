@@ -53,15 +53,15 @@ export class CartComponent implements OnInit {
       }
 
     )
-    this._productService.getSingleCart().subscribe(
-      data => {
-        this.productInCart = data
-        // for (let i = 1; i < this.productInCart.length; i = i + 1) {
-        //   this.totalPrice += this.productInCart[i].price;
-        // }
+    // this._productService.getSingleCart().subscribe(
+    //   data => {
+    //     this.productInCart = data
+    //     // for (let i = 1; i < this.productInCart.length; i = i + 1) {
+    //     //   this.totalPrice += this.productInCart[i].price;
+    //     // }
 
-      }
-    )
+    //   }
+    // )
 
 
 

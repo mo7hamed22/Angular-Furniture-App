@@ -8,54 +8,40 @@ import { Observable } from 'rxjs/internal/Observable';
 import { ALproducts } from 'src/app/interfaces/interface';
 import { ISingleCart } from '../interfaces/GetSingleCartInterface';
 
-// import { catchError } from 'rxjs/operators';
-// <<<<<<< HEAD
-// import { ALaccessiors, ALbedroom, ALfree, ALproducts, IProducts } from 'src/app/interfaces/interface';
+import { catchError } from 'rxjs/operators';
+import { IProduct } from '../interfaces/interfacIproduct';
+
+//import { ALaccessiors, ALbedroom, ALfree, ALproducts, IProducts } from 'src/app/interfaces/interface';
 // import { ISingleCart } from '../interfaces/GetSingleCartInterface';
 // =======
 
-// >>>>>>> ccdbaa03b3746cb6d666f9b58ea1c27dd915c6f0
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class AllproductsService {
-<<<<<<< HEAD
+
   // <<<<<<< HEAD
-  //_url = './assets/data/livingroom.json';
   _url2 = './assets/data/allproducts.json';
   _url3 = './assets/data/decoration.json';
   _url4 = './assets/data/bedroom.json';
   _url5 = './assets/data/freespaces.json';
-  _url = "http://localhost:5553/api/product/allProducts";
+  _url = "http://localhost:5555/api/product/allProducts";
+  public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5';
 
-  allProducts: IProducts[] = [];
+
+  allProducts: IProduct[] = [];
 
   constructor(private _http: HttpClient) { }
+
+
   getAllProducts(): Observable<ALproducts[]> {
-    // =======
-    //    _url= './assets/data/livingroom.json';
-    //    _url2= 'http://localhost:5555/api/product/allProducts';
-    //    _url3= './assets/data/decoration.json';
-    //    _url4= './assets/data/bedroom.json';
-    //    _url5= './assets/data/freespaces.json';
 
-    //   constructor(private _http:HttpClient) { }
-    //   getAllProducts():Observable<ALproducts[]>{
-    // >>>>>>> ef1039b113bde8ed2d5285a809e85b65cfea12e9
-    return this._http.get<ALproducts[]>(this._url2).pipe(
-=======
-
-// <<<<<<< HEAD
-
-//   allProducts: IProducts[] = [];
->>>>>>> c17696f4c99fd8d45003d95cc6ecb9048366b318
-
-public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
-  _url= 'http://localhost:5555/api/product/allProducts';
+    return this._http.get<ALproducts[]>(this._url).pipe()
+  }
 
 
-  constructor(private _http:HttpClient) { }
 
   getSingleCart():Observable<ISingleCart[]>{
     return this._http.get<ISingleCart[]>(this._GetSingleCart).pipe(
@@ -67,65 +53,65 @@ public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
     )
   }
 
-  getAllProducts():Observable<ALproducts[]>{
-// <<<<<<< HEAD
-//     return this._http.get<ALproducts[]>(this._url2).pipe(
+  // getAllProducts():Observable<ALproducts[]>{
+  // <<<<<<< HEAD
+  //     return this._http.get<ALproducts[]>(this._url2).pipe(
 
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
-
-
-//         }
-//       )
-//     )
-//   }
-//   getCategory() {
-//     this.getLivingRoomProducts().subscribe((data) => {
-//       this.allProducts = data;
-//       console.log(this.allProducts)
-//     })
-//   }
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
 
 
+  //         }
+  //       )
+  //     )
+  //   }
+  //   getCategory() {
+  //     this.getLivingRoomProducts().subscribe((data) => {
+  //       this.allProducts = data;
+  //       console.log(this.allProducts)
+  //     })
+  //   }
 
 
-//   getLivingRoomProducts(): Observable<IProducts[]> {
-//     return this._http.get<IProducts[]>(this._url).pipe(
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
 
 
-//         }
-//       )
-//     )
-
-//   }
-//   getAccessiors(): Observable<ALaccessiors[]> {
-//     return this._http.get<ALaccessiors[]>(this._url3).pipe(
-
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
+  //   getLivingRoomProducts(): Observable<IProducts[]> {
+  //     return this._http.get<IProducts[]>(this._url).pipe(
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
 
 
-//         }
-//       )
-// =======
-    return this._http.get<ALproducts[]>(this._url).pipe(
-  
-//      RTCError(
-//        (err)=>{
-//          return throwError(err.message || "server issue ")
-         
-  
-//         })
-// >>>>>>> ccdbaa03b3746cb6d666f9b58ea1c27dd915c6f0
-    )
-    
-}
-}
+  //         }
+  //       )
+  //     )
+
+  //   }
+  //   getAccessiors(): Observable<ALaccessiors[]> {
+  //     return this._http.get<ALaccessiors[]>(this._url3).pipe(
+
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
+
+
+  //         }
+  //       )
+  // =======
+  // return this._http.get<ALproducts[]>(this._url).pipe(
+
+  //      RTCError(
+  //        (err)=>{
+  //          return throwError(err.message || "server issue ")
+
+
+  //         })
+  // >>>>>>> ccdbaa03b3746cb6d666f9b58ea1c27dd915c6f0
+  // )
+
+  // }
+  // }
 
   //_url = './assets/data/livingroom.json';
   // _url2 = './assets/data/allproducts.json';
@@ -134,34 +120,34 @@ public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
   // _url5 = './assets/data/freespaces.json';
   // _url = "http://localhost:5553/api/product/allProducts";
 
-//   allProducts: IProducts[] = [];
+  //   allProducts: IProducts[] = [];
 
-//   constructor(private _http: HttpClient) { }
-//   getAllProducts(): Observable<ALproducts[]> {
-// =======
-//    _url= './assets/data/livingroom.json';
-//    _url2= 'http://localhost:5555/api/product/allProducts';
-//    _url3= './assets/data/decoration.json';
-//    _url4= './assets/data/bedroom.json';
-//    _url5= './assets/data/freespaces.json';
+  //   constructor(private _http: HttpClient) { }
+  //   getAllProducts(): Observable<ALproducts[]> {
+  // =======
+  //    _url= './assets/data/livingroom.json';
+  //    _url2= 'http://localhost:5555/api/product/allProducts';
+  //    _url3= './assets/data/decoration.json';
+  //    _url4= './assets/data/bedroom.json';
+  //    _url5= './assets/data/freespaces.json';
 
-//   constructor(private _http:HttpClient) { }
-//   getAllProducts():Observable<ALproducts[]>{
-// >>>>>>> ef1039b113bde8ed2d5285a809e85b65cfea12e9
-//     return this._http.get<ALproducts[]>(this._url).pipe(
+  //   constructor(private _http:HttpClient) { }
+  //   getAllProducts():Observable<ALproducts[]>{
+  // >>>>>>> ef1039b113bde8ed2d5285a809e85b65cfea12e9
+  //     return this._http.get<ALproducts[]>(this._url).pipe(
 
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
 
 
-//         }
-//       )
-// >>>>>>> d2022f98299f41671f106d4e32b67757054e60d6
-//     )
-//   }
-// }
-//   // getCategory() {
+  //         }
+  //       )
+  // >>>>>>> d2022f98299f41671f106d4e32b67757054e60d6
+  //     )
+  //   }
+  // }
+  //   // getCategory() {
   //   this.getLivingRoomProducts().subscribe((data) => {
   //     this.allProducts = data;
   //     console.log(this.allProducts)
@@ -170,104 +156,104 @@ public _GetSingleCart = 'https://fakestoreapi.herokuapp.com/products?limit=5'
 
 
 
- 
-//   getLivingRoomProducts():Observable<IProducts[]>{
-//     return this._http.get<IProducts[]>(this._url).pipe(
- 
-//      catchError(
-//        (err)=>{
-//          return throwError(err.message || "server issue ")
-         
- 
-//      }
-//      )
-//     )
-    
-// }
-// getAccessiors():Observable<ALaccessiors[]>{
-//   return this._http.get<ALaccessiors[]>(this._url3).pipe(
 
-//    catchError(
-//      (err)=>{
-//        return throwError(err.message || "server issue ")
-       
+  //   getLivingRoomProducts():Observable<IProducts[]>{
+  //     return this._http.get<IProducts[]>(this._url).pipe(
 
-//    }
-//    )
-//   )
-// }
-// getBedRoom():Observable<ALbedroom[]>{
-//   return this._http.get<ALbedroom[]>(this._url4).pipe(
-
-//    catchError(
-//      (err)=>{
-//        return throwError(err.message || "server issue ")
-       
-
-//    }
-//    )
-//   )
-// }
-// getFree():Observable<ALfree[]>{
-//   return this._http.get<ALfree[]>(this._url5).pipe(
-
-//    catchError(
-//      (err)=>{
-//        return throwError(err.message || "server issue ")
-       
-
-//    }
-//    )
-//   )
+  //      catchError(
+  //        (err)=>{
+  //          return throwError(err.message || "server issue ")
 
 
+  //      }
+  //      )
+  //     )
 
-//   getLivingRoomProducts(): Observable<IProducts[]> {
-//     return this._http.get<IProducts[]>(this._url).pipe(
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
+  // }
+  // getAccessiors():Observable<ALaccessiors[]>{
+  //   return this._http.get<ALaccessiors[]>(this._url3).pipe(
 
-
-//         }
-//       )
-//     )
-
-//   }
-//   getAccessiors(): Observable<ALaccessiors[]> {
-//     return this._http.get<ALaccessiors[]>(this._url3).pipe(
-
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
+  //    catchError(
+  //      (err)=>{
+  //        return throwError(err.message || "server issue ")
 
 
-//         }
-//       )
-//     )
-//   }
-//   getBedRoom(): Observable<ALbedroom[]> {
-//     return this._http.get<ALbedroom[]>(this._url4).pipe(
+  //    }
+  //    )
+  //   )
+  // }
+  // getBedRoom():Observable<ALbedroom[]>{
+  //   return this._http.get<ALbedroom[]>(this._url4).pipe(
 
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
-
-
-//         }
-//       )
-//     )
-//   }
-//   getFree(): Observable<ALfree[]> {
-//     return this._http.get<ALfree[]>(this._url5).pipe(
-
-//       catchError(
-//         (err) => {
-//           return throwError(err.message || "server issue ")
+  //    catchError(
+  //      (err)=>{
+  //        return throwError(err.message || "server issue ")
 
 
-//         }
-//       )
-//     )
-//   }
+  //    }
+  //    )
+  //   )
+  // }
+  // getFree():Observable<ALfree[]>{
+  //   return this._http.get<ALfree[]>(this._url5).pipe(
+
+  //    catchError(
+  //      (err)=>{
+  //        return throwError(err.message || "server issue ")
+
+
+  //    }
+  //    )
+  //   )
+
+
+
+  //   getLivingRoomProducts(): Observable<IProducts[]> {
+  //     return this._http.get<IProducts[]>(this._url).pipe(
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
+
+
+  //         }
+  //       )
+  //     )
+
+  //   }
+  //   getAccessiors(): Observable<ALaccessiors[]> {
+  //     return this._http.get<ALaccessiors[]>(this._url3).pipe(
+
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
+
+
+  //         }
+  //       )
+  //     )
+  //   }
+  //   getBedRoom(): Observable<ALbedroom[]> {
+  //     return this._http.get<ALbedroom[]>(this._url4).pipe(
+
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
+
+
+  //         }
+  //       )
+  //     )
+  //   }
+  //   getFree(): Observable<ALfree[]> {
+  //     return this._http.get<ALfree[]>(this._url5).pipe(
+
+  //       catchError(
+  //         (err) => {
+  //           return throwError(err.message || "server issue ")
+
+
+  //         }
+  //       )
+  //     )
+}
 
