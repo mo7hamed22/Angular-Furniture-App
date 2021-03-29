@@ -1,3 +1,10 @@
+<h3>Home Page</h3>
+<img src="imgesWebsite/homePage.png">
+
+
+
+
+
 # Materialproject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
