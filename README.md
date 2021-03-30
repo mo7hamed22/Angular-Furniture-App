@@ -1,3 +1,24 @@
+<h3>Home Page</h3>
+<img src="imgesWebsite/homePage.png">
+
+<h3>Offers</h3>
+<img src="imgesWebsite/offers.png">
+
+<h3>Cart</h3>
+<img src="imgesWebsite/Cart.png">
+<h3>Shipment</h3>
+<img src="imgesWebsite/Shipment.png">
+
+<h3>Dashboard</h3>
+<img src="imgesWebsite/dash-light.png" width="500px">
+<img src="imgesWebsite/dash-dark.png"   width="500px">
+
+
+
+
+
+
+
 # Materialproject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
