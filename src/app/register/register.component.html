@@ -1,0 +1,226 @@
+<div class="container">
+
+
+    <div class="row justify-content-center align-items-center flex-column" style="margin: 30px;">
+
+        <form [formGroup]="registerationForm" class="col-md-6 justify-content-center" novalidate>
+
+            
+            <p class="text-center" id="logo"><img src="./assets/icon.png" width="100px" height="100px"> </p>
+            <h2 class="text-center">Sign Up Homzmart</h2>
+
+            <div class="form-group">
+                <label for="validationCustom01">First name</label>
+                <input [class.is-invalid]="firstName?.invalid && firstName?.touched" formControlName="firstName"
+                     type="text"  class="form-control" placeholder="firstName?" />
+                <div *ngIf="firstName?.invalid && firstName?.touched">
+
+                    <small *ngIf="firstName?.errors?.required"
+                        [class.is-invalid]="firstName?.invalid || firstName?.touched" class="text-danger">
+                         firstName? field is required
+                    </small>
+                    <small *ngIf="firstName?.errors?.minlength" class="text-danger">
+                         firstName? field must be at least 3 characters
+                    </small>
+                    <small class="text-danger" *ngIf="firstName?.errors?.forbiddenName">
+                         firstName? is not allowed
+                    </small>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="validationCustom02">Last name</label>
+                <input [class.is-invalid]="lastName?.invalid && lastName?.touched" formControlName="lastName" type="text"
+                    class="form-control" id="validationCustom02" placeholder="Last name">
+                    
+                        <small *ngIf="lastName?.errors?.required"
+                        [class.d-none]="lastName?.valid || lastName?.untouched"
+                    class="text-danger">
+                    > Last Name is required
+                </small>
+                     
+                
+
+            </div>
+
+            <div class="form-group">
+                <label for="validationCustomUsername" >Email</label> 
+                <input [class.is-invalid]="Email?.invalid && Email?.touched" formControlName="Email" type="email" [pattern]="emailRegx"
+                    class="form-control" id="validationCustom03" placeholder="Email">
+                <div *ngIf="Email?.invalid && Email?.touched">
+                    <small *ngIf="Email?.errors?.required" [class.is-invalid]="Email?.invalid || Email?.touched"
+                        class="text-danger" >
+                        > Email is required
+                    </small>
+
+                    <small class="text-danger" *ngIf="Email?.errors?.pattern" [class.is-invalid]="Email?.invalid || Email?.touched" >
+                        > Email must be a valid 
+                    </small>
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="validationCustom04">Password</label>
+                <input [class.is-invalid]="Password?.invalid && Password?.touched" formControlName="Password"
+                    type="Password" class="form-control" id="validationCustom04" placeholder="Password">
+                <div *ngIf="Password?.invalid && Password?.touched">
+                    <small *ngIf="Password?.errors?.required" [class.is-invalid]="Password?.invalid || Password?.touched"
+                        class="text-danger">
+                        > Password is required
+                    </small>
+                    <small *ngIf="Password?.errors?.minlength"
+                        [class.is-invalid]="Password?.errors?.minlength || Password?.touched" class="text-danger">
+                        > Password must be at least 6 characters
+                    </small>
+                </div>
+
+            </div> 
+             <div class="form-group">
+                <label for="validationCustom05">Re-enter Password</label>
+                <input formControlName="confirmPassword" [class.is-invalid]="registerationForm.errors?.misMatch || confirmPassword?.errors?.minlength "
+                type="Password" class="form-control" id="validationCustom05"
+                    placeholder="comform Password">
+                <div *ngIf=" confirmPassword?.touched">
+                    <small *ngIf="confirmPassword?.errors?.required"
+                        [class.is-invalid]="confirmPassword?.invalid || confirmPassword?.touched" class="text-danger">
+                        > Confirm Password is required
+                    </small>
+
+                    <small  *ngIf="registerationForm.errors?.misMatch || confirmPassword?.errors?.minlength " [class.is-invalid]="registerationForm.errors?.misMatch || confirmPassword?.errors?.minLength" class="text-danger">
+                        > Password? does not match the Password?
+                    </small>
+                    <!-- {{registerationForm.errors?.misMatch.value | json}} -->
+                </div>
+            </div> 
+
+            
+            <div class="form-group">
+                    
+                <label id="termsAndCon" for="Terms">
+                  <input type="checkbox" class="primary">  By Signing up to Homzmart platform, you agree to our <a>Terms and Conditions</a> and our <a>Return
+                        Policy .</a>
+                </label>
+
+
+            </div>
+<input id="btn-reg" (click)="submitData()" class="btn btn-primary btn-block" type="submit" value="register"/>
+        
+    
+        </form>
+    
+
+    </div>
+</div> 
+
+
+
+ <!-- <div class="container"> 
+    <div class="row justify-content-center align-items-center flex-column" style="margin: 30px;">
+
+        <form [formGroup]="registerationForm" class="col-md-6 justify-content-center" novalidate>
+
+{{registerationForm.value | json}}
+            <p class="text-center" id="logo"><img src="./assets/icon.png" width="100px" height="100px"> </p>
+            <h2 class="text-center">Sign Up Homzmart</h2>
+
+            <div class="form-group">
+                <label for="validationCustom01" >First name</label>
+                <input  [class.is-invalid]="firstName??.invalid && firstName??.touched" formControlName="firstName?"
+                     type="text"  class="form-control" placeholder="firstName?" />
+                <div >
+
+                    <small  class="text-danger">
+                        firstName? field is required
+                    </small>
+                    <small  class="text-danger">
+                        firstName? field must be at least 3 characters
+                    </small>
+                    <small class="text-danger" >
+                        firstName? is not allowed
+                    </small>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="validationCustom02">Last name</label>
+                <input formControlName="lastName?" type="text"
+                    class="form-control" id="validationCustom02" placeholder="Last name">
+
+                <small class="text-danger">
+                    Last Name is required
+                </small>
+
+
+
+            </div>
+
+            <div class="form-group">
+                <label >Email?</label>
+                <input  formControlName="Email?" type="Email?"
+                    class="form-control" id="validationCustom03" placeholder="Email?">
+                <div>
+                    <small  class="text-danger"> Email? is required
+                    </small>
+
+                    <small class="text-danger" >
+                         Email? must be a valid Email? address
+                    </small>
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="validationCustom04">Password?</label>
+                <input  formControlName="Password?"
+                    type="Password?" class="form-control" id="validationCustom04" placeholder="Password?">
+                <div >
+                    <small  
+                        class="text-danger">
+                        Password? is required
+                    </small>
+                    <small class="text-danger">
+                        Password? must be at least 6 characters
+                    </small>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="validationCustom05">Re-enter Password?</label>
+                <input formControlName="confirmPassword?" 
+                    type="Password?" class="form-control" id="validationCustom05" placeholder="comform Password?">
+                <div >
+                    <small class="text-danger">
+                        Confirm Password? is required
+                    </small>
+
+                    <small  class="text-danger">
+                        Password? does not match the Password?
+                    </small>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <label id="termsAndCon" for="Terms">
+                    By Signing up to Homzmart platform, you agree to our <a>Terms and Conditions</a> and our <a>Return
+                        Policy .</a>
+                </label>
+            </div>
+            <button id="btn-reg" (click)="submitData()" class="btn btn-primary btn-block" type="submit" value="">
+                Log in
+            </button>
+        </form>
+
+
+    </div>
+</div>  -->

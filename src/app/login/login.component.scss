@@ -1,0 +1,54 @@
+.container {
+    background-color: rgba(225, 219, 219, 0.35);
+}
+
+
+#logo {
+    margin-top: 30px;
+}
+
+form {
+
+    margin: 30px;
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: white 0 5px 5px;
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btn-reg {
+    background-color: #1b3463;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #1b346387;
+    }
+}
+
+#termsAndCon {
+
+    display: block;
+    font-weight: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}

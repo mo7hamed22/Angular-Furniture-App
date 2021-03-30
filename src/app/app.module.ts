@@ -8,10 +8,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 
-import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
-
 import { AllproductsComponent } from './allproducts/allproducts.component';
 import { Category1Component } from './livingroom/category1.component';
 import { Category2Component } from './bedroom/category2.component';
@@ -24,7 +22,10 @@ import { ProductsdetailsComponent } from './productsdetails/productsdetails.comp
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccessiorsComponent,
     HeaderComponent,
     ProductsdetailsComponent,
+    RegisterComponent,
+    LoginComponent
+
 
   ],
   imports: [
@@ -47,13 +51,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatSliderModule,
     MatCardModule,
-    FormsModule,
+   
     HttpClientModule,
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
-  
+     
+  ReactiveFormsModule,
+   FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
