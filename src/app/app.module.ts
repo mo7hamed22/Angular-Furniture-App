@@ -53,6 +53,7 @@ import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HalfDiscountComponent } from './half-discount/half-discount.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 //import { SingleProductComponent } from './single-product/single-product.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 // >>>>>>> c17696f4c99fd8d45003d95cc6ecb9048366b318
@@ -80,7 +81,7 @@ import { HalfDiscountComponent } from './half-discount/half-discount.component';
    HalfDiscountComponent,
    AllproductsComponent, 
 
-    CartComponent,
+    CartComponent, WishListComponent,
 
 
   ],

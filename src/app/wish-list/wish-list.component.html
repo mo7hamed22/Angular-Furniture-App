@@ -1,0 +1,24 @@
+<div class="container-fluid pt-5 mt-5">
+    <div class="text-center">
+        <h1 class="badge-primary badge-bg p-2" style="font-size:40px;">WishList</h1>
+    </div>
+    <div class="row card-group">
+        <div class="col-sm-3 mb-2" *ngFor="let  product of allProductInWisheList">
+            <div class="card">
+                <img [src]="product.product_img" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title" class="display4">{{ product.productName }}</h2>
+                    <p class="card-text"> {{ product.description }}</p>
+                    <p class="card-text"> price: <b> {{ product.price }}</b> </p>
+                    <div class="row">
+                        <div class="col-9">
+                            <button mat-flat-button color="primary"
+                                (click)='addToCart(product.productName)'>AddCart</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

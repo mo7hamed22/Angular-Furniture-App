@@ -13,7 +13,7 @@ var User = new schema({
   },
   cartData: [],
   Gender: String,
-  wishListLists: { type: String },
+  wishListLists: [],
   address: String,
   prevProductsBuy: {},
   addProducts: Boolean,
