@@ -1,6 +1,8 @@
 const express = require("express");
+
 const { Product, schemaValidate, findOne } = require("../models/product");
 const router = express.Router();
+
 var fs = require("fs");
 
 //get products 1
@@ -20,6 +22,8 @@ router.post("/addProducts", function (req, res, next) {
   if (error) {
     return res.status(400).send(error.details[0].message);
   }
+  let addedProduct = req.body;
+  console.log("p", addedProduct);
   const product = new Product({
     productName: req.body.productName,
     description: req.body.description,
@@ -27,6 +31,8 @@ router.post("/addProducts", function (req, res, next) {
     product_img: req.body.product_img,
     category: req.body.category,
     quantity: req.body.quantity,
+    discount: req.body.discount,
+    color: req.body.color,
   });
 
   product.save(function (err, product) {
@@ -109,6 +115,15 @@ router.param("product", function (req, res, next, id) {
     return next();
   });
 });
+
+// router.post("/productsOffers/:discount", function (req, res, next) {
+//   let offer = req.params.discount;
+//   let options = { multi: true, upsert: true };
+
+//   Product.updateMany({}, { discount: offer }, options);
+//   let all = Product.find();
+//   res.send("Done");
+// });
 
 //========
 

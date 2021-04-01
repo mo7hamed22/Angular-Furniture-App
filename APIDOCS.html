@@ -1,62 +1,62 @@
 <body>
 
-<p>
-====>frist open BackEnd Folder in VS code
+  <p>
+    ====>frist open BackEnd Folder in VS code
 
-==> in cmd =>> nodemon start 5555 
+    ==> in cmd =>> nodemon start 5555
 
-or node index
-
-
+    or node index
 
 
-1=> http://localhost:5555/api/product/allProducts  ==> to Get all  Product use methos Get 
 
 
-2=> http://localhost:5555/api/product/addProducts  ==> to Add Product Use Method Post 
-{
- productName: => be Uniqe should
+    1=> http://localhost:5555/api/product/allProducts ==> to Get all Product use methos Get
+
+
+    2=> http://localhost:5555/api/product/addProducts ==> to Add Product Use Method Post
+    {
+    productName: => be Uniqe should
     description: required mor than 10 chars
     price: Number required
-    product_img: string 
+    product_img: string
     category: string
     quantity: number
-	
-}
+
+    }
 
 
 
-3=>http://localhost:5555/api/product/:productId  ==> Find product by id just send the Id
-  use Method ( Get )
+    3=>http://localhost:5555/api/product/:productId ==> Find product by id just send the Id
+    use Method ( Get )
 
 
-4 =>http://localhost:5555/api/product/:productId  ==> For Delete Product by ID use just send the Id
-Method  ( Delete)
+    4 =>http://localhost:5555/api/product/:productId ==> For Delete Product by ID use just send the Id
+    Method ( Delete)
 
 
-5=> http://localhost:5555/api/product/editProduct  ==> For Edit Product  use Method PUT 
+    5=> http://localhost:5555/api/product/editProduct ==> For Edit Product use Method PUT
 
 
 
 
 
-===========================
-Auth ======>
+    ===========================
+    Auth ======>
 
-1=> http://localhost:5555/api/Auth/register ==>for Rejestration 
- type: number required(),=>Check one Or Zero As Admin Or user  
-  userName: string().min(5).max(50).required(),
-  email: string().min(5).max(255).required().email(),
-  password:string().min(5).max(255).required(),
-  ====================================
- 2=http://localhost:5555/api/Auth/login =====> for Login 
-type: number required(),=>Check one Or Zero As Admin Or user  
-  email: string().min(5).max(255).required().email(),
-  password:string().min(5).max(255).required(),
-  //=======================================
-  http://localhost:5555/api/Auth/:userderId ==>Get User Data
+    1=> http://localhost:5555/api/Auth/register ==>for Rejestration
+    type: number required(),=>Check one Or Zero As Admin Or user
+    userName: string().min(5).max(50).required(),
+    email: string().min(5).max(255).required().email(),
+    password:string().min(5).max(255).required(),
+    ====================================
+    2=http://localhost:5555/api/Auth/login =====> for Login
+    type:number required(),=>Check one Or two As Admin Or user
+    email:string().min(5).max(255).required().email(),
+    password:string().min(5).max(255).required(),
+    //=======================================
+    http://localhost:5555/api/Auth/:userderId ==>Get User Data
 
-</p>
+  </p>
 
 
 

@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
 const mongoose = require("mongoose");
 const authRoute = require("./routes/Auth");
 const productRoute = require("./routes/Product");
+const offer = require("./routes/offers");
 const router = express.Router();
 bodyParser = require("body-parser");
 const _PORT = 5555;
@@ -21,6 +23,7 @@ mongoose
   .catch((err) => console.error("could not connect to mongo DB", err));
 
 app.use("/api/product", productRoute);
+//app.use("/api/offer", offer);
 
 app.use("/api/Auth", authRoute);
 // app.use("/", (req, res) => {
