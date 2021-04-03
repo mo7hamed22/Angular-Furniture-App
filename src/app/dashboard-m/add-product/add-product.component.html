@@ -1,9 +1,9 @@
 <div class="container">
     <h1>Add Products</h1>
     {{addProducts.value | json}}
-    <form [formGroup]="addProducts">
+    <form [formGroup]="addProducts" class="row">
         <!-- Product Name -->
-        <div class="form-group">
+        <div class="form-group col-3 ">
             <label class="badge badge-primary p-2" for="productName">Product Name</label>
             <input type="text" [class.is-invalid]="productName?.invalid && productName?.touched"
                 formControlName="productName" class="form-control" id="productName">
@@ -19,7 +19,7 @@
 
         </div>
         <!--Price -->
-        <div class="form-group">
+        <div class="form-group col-3">
             <label class="badge badge-primary p-2" for="price">Price</label>
             <input type="text" class="form-control" id="price" formControlName="price"
                 [class.is-invalid]="price?.invalid && price?.touched">
@@ -28,10 +28,29 @@
                 price Is Required
             </small>
         </div>
+
+        <!--Category  -->
+        <div class="form-group col-3">
+            <label class="badge badge-primary badge-sm p-2 mt-1" for="Category">Category</label>
+            <input type="text" class="form-control" id="Category" formControlName="category">
+        </div>
+        <!-- Description -->
+        <div class="form-group col-3 ">
+            <label class="badge badge-primary p-2" for="Description">Description</label>
+            <input type="text" class="form-control" id="Description" formControlName="description">
+        </div>
+        <div class="form-group col-3">
+            <label class="badge badge-primary p-2" for="Discount">Discount</label>
+            <input type="text" class="form-control" id="Discount" formControlName="discount">
+        </div>
+        <div class="form-group col-3">
+            <label class="badge badge-primary p-2" for="Color">Color</label>
+            <input type="text" class="form-control" id="Color" formControlName="color">
+        </div>
         <!-- Images -->
-        <div class="form-group">
-            <button class="btn btn-danger float-right" (click)="addAnotherImage()">Add Another Image</button>
-            <br>
+        <div class="form-group col-3">
+            <button class="btn-warning float-right" (click)="addAnotherImage()">Add
+                More Image</button>
 
             <label class="badge badge-primary p-2" for="productImages">images</label>
             <input type="text" class="form-control" id="productImages" formControlName="productImages"
@@ -43,36 +62,128 @@
             <!-- <input type="file" class="form-control" id="image" formControlName="images"> -->
             <!-- <button type="submit" class="btn btn-dark">choose</button> -->
         </div>
-        <div formArrayName="alt_ProductImages" *ngFor="let img of alt_ProductImages.controls let i=index">
-            <label class="badge badge-dark p-2" for="productImages">image {{i+1}}</label>
+        <!-- Adding Another Image -->
+        <div class=" col-3 m-1" formArrayName="alt_ProductImages"
+            *ngFor="let img of alt_ProductImages.controls let i=index">
+            <label class="badge badge-dark " for="productImages">image {{i+1}}</label>
+            <button class="btn btn-danger btn-sm float-right" (click)="removeImage(i)">Remove</button>
+
             <input type="text" class="form-control" id="productImages" [formControlName]="i"
                 [class.is-invalid]="productImages?.invalid && productImages?.touched">
 
         </div>
 
 
+        <!-- Add Button -->
+
+    </form>
+    <input type="submit" value="Add Product" class="btn btn-info m-2" (click)="submit()">
+
+    <div class="divider py-1 bg-primary"></div>
+
+    <div>
+
+        <button (click)="addNewForm()" class="btn btn-warning btn-lg float-right">Add More Product</button>
+    </div>
+    {{ addMoreProducts.value | json}}
+
+
+
+
+
+
+    <div class="row" [formGroup]="addProducts" *ngFor="let control of addMoreProducts.controls let x=index">
+
+
+        <!-- Product Name -->
+        <h3 class="badge badge-danger mat-badge-small">Product {{x+1}}</h3>
+        <div class="form-group col-3 ">
+            <label class="badge badge-primary p-2" for="productName">Product Name</label>
+            <input type="text" [class.is-invalid]="productName?.invalid && productName?.touched"
+                formControlName="productName" class="form-control" id="productName">
+            <div *ngIf="productName?.invalid && productName?.touched">
+                <small *ngIf="productName?.errors?.required" class="text-danger">
+                    Product Name Is Required And Must Be Unique
+                </small>
+                <small *ngIf="productName?.errors?.minlength" class="text-danger">
+                    Product Length At Least 10 Characters
+                </small>
+            </div>
+
+
+        </div>
+        <!--Price -->
+        <div class="form-group col-3">
+            <label class="badge badge-primary p-2" for="price">Price</label>
+            <input type="text" class="form-control" id="price" formControlName="price"
+                [class.is-invalid]="price?.invalid && price?.touched">
+
+            <small *ngIf="price?.errors?.required" class="text-danger">
+                price Is Required
+            </small>
+        </div>
+
         <!--Category  -->
-        <div class="form-group">
-            <label class="badge badge-primary p-2" for="Category">Category</label>
+        <div class="form-group col-3">
+            <label class="badge badge-primary badge-sm p-2 mt-1" for="Category">Category</label>
             <input type="text" class="form-control" id="Category" formControlName="category">
         </div>
         <!-- Description -->
-        <div class="form-group">
+        <div class="form-group col-3 ">
             <label class="badge badge-primary p-2" for="Description">Description</label>
             <input type="text" class="form-control" id="Description" formControlName="description">
         </div>
-        <div class="form-group">
+        <!-- Discount -->
+        <div class="form-group col-3">
             <label class="badge badge-primary p-2" for="Discount">Discount</label>
             <input type="text" class="form-control" id="Discount" formControlName="discount">
         </div>
-        <div class="form-group">
+        <!-- Color -->
+        <div class="form-group col-3">
             <label class="badge badge-primary p-2" for="Color">Color</label>
             <input type="text" class="form-control" id="Color" formControlName="color">
         </div>
-        <!-- Add Button -->
-        <input type="submit" value="Add" class="btn btn-info">
-    </form>
+        <!-- Images -->
+        <div class="form-group col-3">
+            <button class="btn-warning float-right" (click)="addAnotherImage()">Add
+                More Image</button>
 
-    <button class="btn btn-secondary" (click)="editProduct()">Edit</button>
+            <label class="badge badge-primary p-2" for="productImages">images</label>
+            <input type="text" class="form-control" id="productImages" formControlName="productImages"
+                [class.is-invalid]="productImages?.invalid && productImages?.touched">
+
+            <small *ngIf="price?.errors?.required" class="text-danger">
+                product Images Is Required
+            </small>
+            <!-- <input type="file" class="form-control" id="image" formControlName="images"> -->
+            <!-- <button type="submit" class="btn btn-dark">choose</button> -->
+        </div>
+        <div class=" col-3 m-1" formArrayName="alt_ProductImages"
+            *ngFor="let img of alt_ProductImages.controls let i=index">
+            <label class="badge badge-dark " for="productImages">image {{i+1}}</label>
+            <button class="btn btn-danger btn-sm float-right" (click)="removeImage(i)">Remove</button>
+
+            <input type="text" class="form-control" id="productImages" [formControlName]="i"
+                [class.is-invalid]="productImages?.invalid && productImages?.touched">
+
+        </div>
+
+
+        <!-- Add Button -->
+        <div class="row">
+            <input type="submit" value="Add Product" class="btn btn-info m-2" (click)="submit()">
+            <button (click)="deleteProduct(x)" class="btn btn-danger">Delete</button>
+        </div>
+        <mat-divider></mat-divider>
+
+        <div class="row">
+            <div class="divider py-1 bg-dark"></div>
+        </div>
+
+
+
+
+    </div>
+
 
 </div>
