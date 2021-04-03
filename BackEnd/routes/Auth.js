@@ -6,10 +6,10 @@ const router = express.Router();
 // register End Point
 router.post("/register", async (req, res) => {
   // First Validate The Request
-  const { error } = schemaValidate.validate(req.body);
-  if (error) {
-    return res.status(400).send(error.details[0].message);
-  }
+  // const { error } = schemaValidate.validate(req.body);
+  // if (error) {
+  //   return res.status(400).send(error.details[0].message);
+  // }
   //
   //    // Check if this user already exists
 
@@ -18,13 +18,18 @@ router.post("/register", async (req, res) => {
     return res.status(400).send("That user already exists !");
   } else {
     // Insert the new user if they do not exist yet
+    console.log(req);
 
     const user = new User({
       type: req.body.type,
       userName: req.body.userName,
       password: req.body.password,
       email: req.body.email,
+      cartData: [...req.body.cartData],
+      wishListLists: req.body.wishListLists,
     });
+    console.log("CartData", user.cartData);
+
     await user.save();
     //user.password = await bcrypt.hash(user.password, salt);
 
@@ -44,6 +49,9 @@ router.post("/login", async (req, res) => {
     });
   } else
     res.status(200).json({
+      wishListLists: user.wishListLists,
+      cartData: user.cartData,
+      id: user.id,
       message: "User Logged in Successfully",
     });
 });

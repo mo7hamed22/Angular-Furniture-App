@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { AllProductDahshboardService } from 'src/app/services/all-product-dahshboard.service';
 import { IProduct } from 'src/app/interfaces/interfacIproduct';
+import { DeleteProductService } from 'src/app/services/delete-product.service';
 
 @Component({
   selector: 'app-home',
@@ -37,7 +38,9 @@ export class HomeComponent {
   // );
 
   constructor(private breakpointObserver: BreakpointObserver,
-    private allProductService: AllProductDahshboardService) { }
+    private allProductService: AllProductDahshboardService,
+    private deleteProductService: DeleteProductService
+  ) { }
   ngOnInit(): void {
 
     this.allProductService.getALLProductsForDashboard().subscribe(
@@ -48,6 +51,18 @@ export class HomeComponent {
       serviceErr => {
         this.errorMsg = serviceErr;
       })
+
+  }
+  deleteProduct(productId: string) {
+    this.deleteProductService.deleteProduct(productId).subscribe(
+      res => {
+        console.log("Product Deleted !", res)
+      },
+      err => {
+        console.log("Error", err)
+
+      }
+    )
 
   }
 }
