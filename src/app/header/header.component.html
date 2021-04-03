@@ -1,34 +1,71 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " >
-    <a class="navbar-brand" href="#"> <img src="./assets/imgs/allprodimgs/logo.png" style="width: 40px;"> Homzmart</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link"  routerLink='/allprducts'>  Home</a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+  <a class="navbar-brand" href="#"> <img src="./assets/imgs/allprodimgs/logo.png" style="width: 40px;"> Homzmart</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <li class="nav-item">
-          <a class="nav-link"  routerLink='/offers'>  offers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ><i class="fal fa-unlock-alt"></i> Login </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink='/cart' ><i class="fas fa-shopping-cart"></i> Cart</a>
-          </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/allprducts'> Home</a>
+      </li>
+
+
+
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/offers'> offers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"><i class="fal fa-unlock-alt"></i> Login </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/cart'><i class="fas fa-shopping-cart"></i> Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/wishlist'><i class="fas fa-heart"></i> Wishes</a>
+      </li>
+
+    </ul>
+
+    <!-- ======================================= -->
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input   
+        [formControl] = 'myControl'
+        [matAutocomplete]="auto"
+        class="form-control mr-sm-2 col-lg-8"
+        type="search" placeholder="Search" 
+        aria-label="Search"> -->
+      <!-- start nada -->
+      <!-- <mat-autocomplete #auto="matAutocomplete"        [displayWith] = 'dispayFun'>
+        <mat-option *ngFor="let option of options" [value] = 'option'>
+        
+        </mat-option>
+      </mat-autocomplete> -->
+      <!-- end Nada -->
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput
+                 placeholder="Search"
+                 aria-label="State"
+                 [matAutocomplete]="auto"
+                 [formControl]="stateCtrl">
+          <mat-autocomplete #auto="matAutocomplete" style="z-index: 99999;">
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.productName">
+              <img class="example-option-img" aria-hidden [src]="state.product_img"  height="25">
+              <span>{{state.productName}}</span> |
+              <small>Population: {{state.price}}</small>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
       
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button mat-raised-button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-    
-  </nav>
- 
+      <!-- <button mat-raised-button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
+  </div>
+
+</nav>

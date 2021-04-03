@@ -53,9 +53,15 @@ import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HalfDiscountComponent } from './half-discount/half-discount.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 //import { SingleProductComponent } from './single-product/single-product.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 // >>>>>>> c17696f4c99fd8d45003d95cc6ecb9048366b318
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddtoCarDialogComponent } from './allproducts/addto-car-dialog/addto-car-dialog.component';
+import { CartDialogComponent } from './allproducts/addto-car-dialog/cart-dialog/cart-dialog.component';
+import { WishlistdialogComponent } from './allproducts/wishlistdialog/wishlistdialog.component';
+
 
 @NgModule({
   declarations: [
@@ -72,18 +78,20 @@ import { HalfDiscountComponent } from './half-discount/half-discount.component';
     NavComponent,
     HomeComponent,
     AddProductComponent,
-
    ProductsWithOfferComponent,
    FreeDeliveryComponent,
    ProductDetailsComponent,
    ProductDetailsComponent,
    HalfDiscountComponent,
    AllproductsComponent, 
-
-    CartComponent,
-
+  CartComponent,
+   WishListComponent,
+   AddtoCarDialogComponent,
+   CartDialogComponent,
+   WishlistdialogComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -115,8 +123,8 @@ import { HalfDiscountComponent } from './half-discount/half-discount.component';
     MatSelectModule,
     MatStepperModule,
     MatDividerModule,
-    MatRadioModule
-
+    MatRadioModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
