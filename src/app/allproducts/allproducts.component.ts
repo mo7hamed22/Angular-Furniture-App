@@ -4,7 +4,10 @@ import { AddToCartService } from '../add-to-cart.service';
 import { ALproducts } from '../interfaces/interface';
 import { AllproductsService } from '../services/allproducts.service';
 import { ProductIncartService } from '../services/product-incart.service';
-
+import { MatDialog } from '@angular/material/dialog';
+import { AddtoCarDialogComponent } from './addto-car-dialog/addto-car-dialog.component';
+import { CartDialogComponent } from './addto-car-dialog/cart-dialog/cart-dialog.component';
+import { WishlistdialogComponent } from './wishlistdialog/wishlistdialog.component';
 @Component({
   selector: 'app-allproducts',
   templateUrl: './allproducts.component.html',
@@ -16,12 +19,14 @@ export class AllproductsComponent implements OnInit {
   wishesProduct: string[] = []
   cartProduct: string[] = []
   isClicked: boolean = false;
-
+  isTrue = false;
 
   constructor(
     private allproducts: AllproductsService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    public dialog: MatDialog,
+
 
     ////////////////////////////////////////////////
     // start Nada
@@ -29,19 +34,26 @@ export class AllproductsComponent implements OnInit {
   ) { }
 
 
-  sendProductToService(productId: any) {
-    this.addProductToCart.sendToCar('kk')
 
-    this.cartProduct.push(productId)
-    localStorage.setItem("cartProduct_id", JSON.stringify(this.cartProduct))
+  sendProductTocart(productName: any) {
+    if (this.cartProduct.includes(productName)) {
+      this.dialog.open(CartDialogComponent)
+    } else {
+      this.dialog.open(AddtoCarDialogComponent);
+      this.cartProduct.push(productName)
+      localStorage.setItem("cartProduct_id", JSON.stringify(this.cartProduct))
+    }
   }
 
   sendProductWishList(productName: any) {
-
-    this.wishesProduct.push(productName)
-    localStorage.setItem("wishesProductName", JSON.stringify(this.wishesProduct))
-    console.log("Get IDS LocalStorage", localStorage.getItem("wishesProductName"))
-
+    if (this.wishesProduct.includes(productName)){
+      this.dialog.open(WishlistdialogComponent)
+    }else{
+      this.isTrue != this.isTrue
+      this.wishesProduct.push(productName)
+      localStorage.setItem("wishesProductName", JSON.stringify(this.wishesProduct))
+      console.log("Get IDS LocalStorage", localStorage.getItem("wishesProductName"))
+    }
   }
 
   cart: any

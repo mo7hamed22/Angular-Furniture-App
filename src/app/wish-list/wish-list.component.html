@@ -15,7 +15,9 @@
                             <button mat-flat-button color="primary"
                                 (click)='addToCart(product.productName)'>AddCart</button>
                         </div>
-
+                        <div class="heartIcon col-3">
+                            <i [class.text-danger] ='product.productName' (click)='deleteFromWish(product.productName)' class="fas fa-heart"><small style="font-size: 10px;">Remove</small></i>
+                        </div>
                     </div>
                 </div>
             </div>

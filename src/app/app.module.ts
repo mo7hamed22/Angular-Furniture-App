@@ -45,7 +45,7 @@ import { MatRadioModule } from '@angular/material/radio';
 
 
 
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductsWithOfferComponent } from './products-with-offer/products-with-offer.component';
 //import {HttpClientModule} from '@angular/common/http';
 import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
@@ -59,6 +59,11 @@ import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc
 //import { SingleProductComponent } from './single-product/single-product.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 // >>>>>>> c17696f4c99fd8d45003d95cc6ecb9048366b318
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddtoCarDialogComponent } from './allproducts/addto-car-dialog/addto-car-dialog.component';
+import { CartDialogComponent } from './allproducts/addto-car-dialog/cart-dialog/cart-dialog.component';
+import { WishlistdialogComponent } from './allproducts/wishlistdialog/wishlistdialog.component';
+
 
 @NgModule({
   declarations: [
@@ -75,18 +80,23 @@ import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc
     NavComponent,
     HomeComponent,
     AddProductComponent,
+    ProductsWithOfferComponent,
+    FreeDeliveryComponent,
+    ProductDetailsComponent,
+    ProductDetailsComponent,
+    HalfDiscountComponent,
+    AllproductsComponent,
 
-   ProductsWithOfferComponent,
-   FreeDeliveryComponent,
-   ProductDetailsComponent,
-   ProductDetailsComponent,
-   HalfDiscountComponent,
-   AllproductsComponent, 
+    SearchDashComponent, EditProductcComponent,
 
-    CartComponent, WishListComponent, SearchDashComponent, EditProductcComponent,
-
+    CartComponent,
+    WishListComponent,
+    AddtoCarDialogComponent,
+    CartDialogComponent,
+    WishlistdialogComponent,
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -109,7 +119,7 @@ import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc
     MatMenuModule,
     MatSlideToggleModule,
     MatIconModule,
-   MatButtonToggleModule,
+    MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
@@ -118,8 +128,8 @@ import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc
     MatSelectModule,
     MatStepperModule,
     MatDividerModule,
-    MatRadioModule
-
+    MatRadioModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,7 @@ import { HalfDiscountComponent } from './half-discount/half-discount.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc.component';
+import { SearchDashComponent } from './dashboard-m/search-dash/search-dash.component';
 //import {ProductDetailsComponent} from './product-details/product-details.component';
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
     children: [{ path: 'editProduct/:productId', component: EditProductcComponent }]
 
   },
+  { path: 'searchProduct', component: SearchDashComponent },
   { path: 'addProduct', component: AddProductComponent },
   { path: '', redirectTo: '/allprducts', pathMatch: 'full' },
   { path: 'allprducts', component: AllproductsComponent },
@@ -38,6 +40,8 @@ const routes: Routes = [
   { path: 'freespaces', component: FreespacesComponent },
   { path: 'decoration', component: AccessiorsComponent },
   { path: 'wishlist', component: WishListComponent },
+
+
 
   // =======
   { path: 'offers', component: ProductsWithOfferComponent },
