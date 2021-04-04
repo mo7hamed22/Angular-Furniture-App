@@ -4,6 +4,8 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { AllProductDahshboardService } from 'src/app/services/all-product-dahshboard.service';
 import { IProduct } from 'src/app/interfaces/interfacIproduct';
 import { DeleteProductService } from 'src/app/services/delete-product.service';
+import { EditProductService } from 'src/app/services/edit-product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,7 @@ import { DeleteProductService } from 'src/app/services/delete-product.service';
 })
 export class HomeComponent {
   productList: IProduct[] = [];
-  col = 3; row = 3;
+  col = 2; row = 3;
 
   errorMsg: any = "";
   /** Based on the screen size, switch from standard to one column per row */
@@ -39,12 +41,15 @@ export class HomeComponent {
 
   constructor(private breakpointObserver: BreakpointObserver,
     private allProductService: AllProductDahshboardService,
-    private deleteProductService: DeleteProductService
+    private deleteProductService: DeleteProductService,
+    private editProductService: EditProductService,
+    private route: Router
   ) { }
   ngOnInit(): void {
 
     this.allProductService.getALLProductsForDashboard().subscribe(
       data => {
+
         this.productList = data;
         console.log("List p", this.productList)
       },
@@ -54,6 +59,9 @@ export class HomeComponent {
 
   }
   deleteProduct(productId: string) {
+    this.productList = this.productList.filter(product => {
+      return product._id != productId;
+    })
     this.deleteProductService.deleteProduct(productId).subscribe(
       res => {
         console.log("Product Deleted !", res)
@@ -64,5 +72,10 @@ export class HomeComponent {
       }
     )
 
+  }
+
+  editProduct(productId: string) {
+
+    this.route.navigate(['/home_d/editProduct', productId])
   }
 }

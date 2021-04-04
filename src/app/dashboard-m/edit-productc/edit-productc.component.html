@@ -1,0 +1,80 @@
+<form [formGroup]="addProducts" class="row">
+    <!-- Product Name -->
+    {{newProduct | json}}
+
+    <div class="form-group col-3 ">
+        <label class="badge badge-primary p-2" for="productName">Product Name</label>
+        <input type="text" [class.is-invalid]="productName?.invalid && productName?.touched"
+            formControlName="productName" class="form-control" id="productName" [value]="newProduct.productName">
+        <div *ngIf="productName?.invalid && productName?.touched">
+            <small *ngIf="productName?.errors?.required" class="text-danger">
+                Product Name Is Required And Must Be Unique
+            </small>
+            <small *ngIf="productName?.errors?.minlength" class="text-danger">
+                Product Length At Least 10 Characters
+            </small>
+        </div>
+
+
+    </div>
+    <!--Price -->
+    <div class="form-group col-3">
+        <label class="badge badge-primary p-2" for="price">Price</label>
+        <input type="text" class="form-control" id="price" formControlName="price"
+            [class.is-invalid]="price?.invalid && price?.touched" [value]="newProduct.price">
+
+        <small *ngIf="price?.errors?.required" class="text-danger">
+            price Is Required
+        </small>
+    </div>
+
+    <!--Category  -->
+    <div class="form-group col-3">
+        <label class="badge badge-primary badge-sm p-2 mt-1" for="Category">Category</label>
+        <input type="text" class="form-control" id="Category" formControlName="category" [value]="newProduct.category">
+    </div>
+    <!-- Description -->
+    <div class="form-group col-3 ">
+        <label class="badge badge-primary p-2" for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" formControlName="description" [value]="">
+    </div>
+    <div class="form-group col-3">
+        <label class="badge badge-primary p-2" for="Discount">Discount</label>
+        <input type="text" class="form-control" id="Discount" formControlName="discount" [value]="newProduct.discount">
+    </div>
+    <div class="form-group col-3">
+        <label class="badge badge-primary p-2" for="Color">Color</label>
+        <input type="text" class="form-control" id="Color" formControlName="color" [value]="newProduct.color">
+    </div>
+    <!-- Images -->
+    <div class="form-group col-3">
+        <button class="btn-warning float-right" (click)="addAnotherImage()">Add
+            More Image</button>
+
+        <label class="badge badge-primary p-2" for="productImages">images</label>
+        <input type="text" class="form-control" id="productImages" formControlName="productImages"
+            [class.is-invalid]="productImages?.invalid && productImages?.touched" [value]="newProduct.product_img">
+
+        <small *ngIf="productImages?.errors?.required" class="text-danger">
+            product Images Is Required
+        </small>
+        <!-- <input type="file" class="form-control" id="image" formControlName="images"> -->
+        <!-- <button type="submit" class="btn btn-dark">choose</button> -->
+    </div>
+    <!-- Adding Another Image -->
+    <div class=" col-3 m-1" formArrayName="alt_ProductImages"
+        *ngFor="let img of alt_ProductImages.controls let i=index">
+        <label class="badge badge-dark " for="productImages">image {{i+1}}</label>
+        <button class="btn btn-danger btn-sm float-right" (click)="removeImage(i)">Remove</button>
+
+        <input type="text" class="form-control" id="productImages" [formControlName]="i"
+            [class.is-invalid]="productImages?.invalid && productImages?.touched" [value]="newProduct.product_img">
+
+    </div>
+
+    <input type="submit" value="Edit Product" class="btn btn-info m-2" (click)="submit()">
+
+    <div class="divider py-1 bg-primary"></div>
+    <!-- Add Button -->
+
+</form>

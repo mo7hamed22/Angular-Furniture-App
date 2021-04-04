@@ -54,6 +54,8 @@ import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HalfDiscountComponent } from './half-discount/half-discount.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { SearchDashComponent } from './dashboard-m/search-dash/search-dash.component';
+import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc.component';
 //import { SingleProductComponent } from './single-product/single-product.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 // >>>>>>> c17696f4c99fd8d45003d95cc6ecb9048366b318
@@ -81,7 +83,7 @@ import { WishListComponent } from './wish-list/wish-list.component';
    HalfDiscountComponent,
    AllproductsComponent, 
 
-    CartComponent, WishListComponent,
+    CartComponent, WishListComponent, SearchDashComponent, EditProductcComponent,
 
 
   ],

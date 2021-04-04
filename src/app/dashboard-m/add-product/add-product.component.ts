@@ -20,10 +20,8 @@ export class AddProductComponent implements OnInit {
     discount: [''],
     color: ['']
   })
+
   addMoreProducts = this.fb.array([])
-
-
-
 
 
 
@@ -31,7 +29,6 @@ export class AddProductComponent implements OnInit {
     return this.addProducts.get('alt_ProductImages') as FormArray;
 
   }
-
 
   get productName() {
     return this.addProducts.get('productName');
@@ -62,11 +59,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  editProduct() {
-    this.addProducts.patchValue({
-      productName: "Product1"
-    })
-  }
+
   addAnotherImage() {
     this.alt_ProductImages.push(this.fb.control(''))
 

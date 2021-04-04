@@ -4,8 +4,9 @@ export interface IProduct {
     productName: String;
     description: string;
     price: number;
-    category: string;
+    category?: string;
     quantity: Number,
-    discount: String
+    discount?: String
+    color?: string
 
 }

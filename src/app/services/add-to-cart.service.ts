@@ -8,7 +8,7 @@ export class AddToCartService {
   // private addToCar = new Subject<number>()
 
   // sendToCar(productId:number){
-  //   this.addToCar.next(productId)
+  //  this.addToCar.next(productId)
   // }
 
 

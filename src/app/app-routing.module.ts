@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccessiorsComponent } from './accessiors/accessiors.component';
 import { AllproductsComponent } from './allproducts/allproducts.component';
@@ -18,12 +18,17 @@ import { FreeDeliveryComponent } from './free-delivery/free-delivery.component';
 import { HalfDiscountComponent } from './half-discount/half-discount.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { EditProductcComponent } from './dashboard-m/edit-productc/edit-productc.component';
 //import {ProductDetailsComponent} from './product-details/product-details.component';
 
 const routes: Routes = [
   // <<<<<<< HEAD
 
-  { path: 'home_d', component: HomeComponent },
+  {
+    path: 'home_d', component: HomeComponent,
+    children: [{ path: 'editProduct/:productId', component: EditProductcComponent }]
+
+  },
   { path: 'addProduct', component: AddProductComponent },
   { path: '', redirectTo: '/allprducts', pathMatch: 'full' },
   { path: 'allprducts', component: AllproductsComponent },
